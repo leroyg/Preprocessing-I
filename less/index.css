@@ -1,35 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
+a ins,
 kbd,
 q,
 s,
@@ -138,8 +107,29 @@ container.container {
   width: 1024px;
   margin: 0 auto;
 }
+container.container nav {
+  width: 100%;
+  background-color: #fff;
+  font-size: .7em;
+  display: flex;
+  text-align: center;
+  border: none;
+  letter-spacing: 2px;
+}
+container.container nav nav a {
+  color: #3498DB;
+  padding: 2px;
+  margin: 0% 1% 0% 1%;
+}
 .navigation {
   text-decoration: none;
+}
+nav ul {
+  list-style-type: none;
+}
+nav ul li {
+  display: flex;
+  padding: 10px;
 }
 @media (max-width: 515px) {
   header nav {

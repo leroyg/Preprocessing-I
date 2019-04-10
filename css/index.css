@@ -1,36 +1,4 @@
-/* Compile your LESS file! */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
+a ins,
 kbd,
 q,
 s,
@@ -84,13 +52,14 @@ time,
 mark,
 audio,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article,
 aside,
@@ -103,46 +72,118 @@ hgroup,
 menu,
 nav,
 section {
-  display: block;
+    display: block;
 }
+
 body {
-  line-height: 1;
+    line-height: 1;
 }
+
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
+
 blockquote,
 q {
-  quotes: none;
+    quotes: none;
 }
+
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
-  content: none;
+    content: '';
+    content: none;
 }
+
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
+
 /* Set every element's box-sizing to border-box */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
-table.table {
-  width: 100%;
+
+container.container {
+    width: 1024px;
+    margin: 0 auto;
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
 }
-.table th,
-.table td {
-  text-align: left;
-  padding: 0.25em;
+
+container.container nav {
+    width: 50%;
+    background-color: #fff;
+    font-size: 0.9em;
+    display: flex;
+    text-align: center;
+    letter-spacing: 2px;
+    flex-direction: row;
+    justify-content: center;
 }
-.table tr {
-  border-bottom: 1px solid #DDD;
+
+container.container nav nav a {
+    color: #3498DB;
+    padding: 2px;
+    margin: 0% 1% 0% 1%;
 }
+
+.navigation {
+    text-decoration: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+nav ul {
+    list-style-type: none;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+nav ul li {
+    display: flex;
+    padding: 0% 5% 0% 5%;
+}
+
+.nav-links li a{
+    text-decoration: none;
+}
+
+@media (max-width: 515px) {
+    header nav {
+        margin-left: 0;
+    }
+}
+
+header nav a {
+    margin-left: 20px;
+    font-size: 1.8rem;
+}
+
+header nav .first-anchor {
+    margin-left: 0;
+}
+
+.middle-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 515px) {
+    .middle-content {
+        flex-direction: column;
+    }
+}
+
+.table {
+    width: 100%;
