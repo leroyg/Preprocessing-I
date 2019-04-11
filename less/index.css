@@ -187,10 +187,9 @@ header nav .first-anchor {
   display: flex;
   flex-direction: column;
 }
- .cta-block h4{
-     font-style: italic;
- }
-
+.cta-block h4 {
+  font-style: italic;
+}
 .btn-connect {
   background: white;
   border-radius: 12px;
@@ -204,11 +203,80 @@ header nav .first-anchor {
   width: 95%;
   margin: 0 auto;
 }
+.content-left {
+  width: 45%;
+}
+.content-right {
+  width: 45%;
+}
 .bottom-content {
   display: flex;
   flex-wrap: wrap;
   width: 95%;
   margin: 0 auto;
+}
+/*
+ * Define the widths: play around with these to get a best fit.
+ */
+ @text-width: 180px;
+ @num-width: 80px;
+ 
+ //** Main container: initialize the flex, direction is row **//
+ .table-row {
+   display: flex;           display: -webkit-flex;
+   flex-direction: row;     -webkit-flex-direction: row;
+   flex-grow: 0;            -webkit-flex-grow: 0;
+   flex-wrap: wrap;         -webkit-flex-wrap: wrap;
+   width: 100%;
+   padding-left: 15px;
+   padding-right: 15px;
+ }
+ 
+ //** Text based cells: grow, truncate and show ellipsis when there is not enough space**//
+ .text {
+   flex-grow: 1;            -webkit-flex-grow: 1;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   padding-right: 20px;
+ }
+ 
+ //** Fix the minimum width of the leaf level cells **//
+ .text {
+   width: @text-width;
+ }
+ 
+ .num {
+   width: @num-width;
+ }
+ 
+ /*
+  * General good-look styles, not mandatory.
+  */
+ body {
+   font-size: 20px;
+ }
+ 
+ .table-row {
+   border-bottom: 2px solid #e0e0e0;
+   border-collapse: collapse;
+   padding-top: 5px;
+ }
+ 
+ .table-row.header {
+   background-color: #FFEEDB;
+   font-weight: bold;
+   padding-top: 8px;
+   padding-bottom: 8px;
+ }
+ 
+
+.footer{
+    text-align: center;
+    background: gray;
+    color: lightgray;
+    width: 95%;
+    margin: 5% 0%;
 }
 @media (max-width: 515px) {
   .middle-content {
@@ -217,5 +285,4 @@ header nav .first-anchor {
 }
 .table {
   width: 95%;
-  background: dodgerblue;
 }
