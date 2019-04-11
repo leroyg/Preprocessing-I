@@ -102,34 +102,63 @@ table {
 html,
 body {
   height: 100%;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
+  /* font-size: 62.5%; */
 }
-container.container {
+h1,
+h3 {
+  color: dimgray;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  color: #3498DB;
+  font-size: 2.0rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+.container {
   width: 1024px;
   margin: 0 auto;
+  font-family: "Oswald", Helvetica, Arial, sans-serif;
 }
-container.container nav {
-  width: 100%;
+.container nav {
+  width: 50%;
   background-color: #fff;
-  font-size: .7em;
+  font-size: 0.9rem;
   display: flex;
   text-align: center;
-  border: none;
   letter-spacing: 2px;
+  flex-direction: row;
 }
-container.container nav nav a {
+.container nav a {
   color: #3498DB;
   padding: 2px;
   margin: 0% 1% 0% 1%;
 }
 .navigation {
   text-decoration: none;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  margin: 1% 0% 1% 0%;
 }
 nav ul {
   list-style-type: none;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 nav ul li {
   display: flex;
-  padding: 10px;
+  padding: 0% 5% 0% 5%;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: #3498DB;
 }
 @media (max-width: 515px) {
   header nav {
@@ -143,9 +172,43 @@ header nav a {
 header nav .first-anchor {
   margin-left: 0;
 }
+.top-content {
+  width: 95%;
+  margin: 0 auto;
+  background: lightblue;
+  padding: 1%;
+}
+.top-content h1 {
+  color: dimgray;
+  /** font-family: "Merriweather", serif; **/
+}
+.cta-block {
+  color: #3498DB;
+  display: flex;
+  flex-direction: column;
+}
+ .cta-block h4{
+     font-style: italic;
+ }
+
+.btn-connect {
+  background: white;
+  border-radius: 12px;
+  width: 10%;
+  margin: 0% 0% 0% 0%;
+  color: black;
+}
 .middle-content {
   display: flex;
   flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+}
+.bottom-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
 }
 @media (max-width: 515px) {
   .middle-content {
@@ -153,13 +216,6 @@ header nav .first-anchor {
   }
 }
 .table {
-  width: 100%;
-}
-.table th,
-.table td {
-  text-align: left;
-  padding: 0.25em;
-}
-.table tr {
-  border-bottom: 1px solid #DDD;
+  width: 95%;
+  background: dodgerblue;
 }
