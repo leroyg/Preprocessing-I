@@ -181,6 +181,7 @@ header nav .first-anchor {
 .top-content h1 {
   color: dimgray;
   /** font-family: "Merriweather", serif; **/
+  margin-bottom: 0px;
 }
 .cta-block {
   color: #3498DB;
@@ -207,11 +208,10 @@ header nav .first-anchor {
   width: 45%;
 }
 .content-right {
-  width: 45%;
+  width: 20%;
+  margin: 0 auto;
 }
 .bottom-content {
-  display: flex;
-  flex-wrap: wrap;
   width: 95%;
   margin: 0 auto;
 }
@@ -223,10 +223,10 @@ header nav .first-anchor {
  
  //** Main container: initialize the flex, direction is row **//
  .table-row {
-   display: flex;           display: -webkit-flex;
-   flex-direction: row;     -webkit-flex-direction: row;
-   flex-grow: 0;            -webkit-flex-grow: 0;
-   flex-wrap: wrap;         -webkit-flex-wrap: wrap;
+   display: flex;           
+   flex-direction: row;     
+   flex-grow: 0;             
+   flex-wrap: wrap;  
    width: 100%;
    padding-left: 15px;
    padding-right: 15px;
@@ -234,7 +234,7 @@ header nav .first-anchor {
  
  //** Text based cells: grow, truncate and show ellipsis when there is not enough space**//
  .text {
-   flex-grow: 1;            -webkit-flex-grow: 1;
+   flex-grow: 1;            
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
@@ -261,22 +261,27 @@ header nav .first-anchor {
    border-bottom: 2px solid #e0e0e0;
    border-collapse: collapse;
    padding-top: 5px;
+   display: flex;
+   justify-content: space-between;
  }
  
  .table-row.header {
-   background-color: #FFEEDB;
+   background-color: #3498DB;
    font-weight: bold;
    padding-top: 8px;
    padding-bottom: 8px;
+   display: flex;
+   justify-content: space-between;
  }
  
 
 .footer{
-    text-align: center;
     background: gray;
     color: lightgray;
     width: 95%;
-    margin: 5% 0%;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
 }
 @media (max-width: 515px) {
   .middle-content {
