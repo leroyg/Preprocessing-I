@@ -1,0 +1,343 @@
+// Is this working?
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+	background-color: #fefefe;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+    font-family: "Oswald", Helvetica, Arial, sans-serif;
+}
+
+// variable section
+
+@lightgrey: #eeeeee;
+@leroyblue: #3498DB;
+@secondary-color: #0057C1;
+@rem01: 1.1rem;
+
+// Begin element styling
+
+footer {
+	background-color: @lightgrey;
+	text-align: center;
+	margin: 0 0 2rem 0;
+	padding: 2rem 0 2rem 0;
+}
+
+.container {
+	width: 98%;
+}
+
+.nav-section {
+	nav {
+		display: flex;
+		justify-content: flex-end;
+        margin: 2rem 2rem;
+        width: 93.5%;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		// justify-content: center;
+		// align-items: center;
+	}
+
+	li {
+		margin: 0 1rem;
+	}
+
+	li a {
+		text-decoration: none;
+		color: @leroyblue;
+	}
+
+	li a:hover {
+		color: lightblue;
+        text-decoration: underline;
+        font-size: @rem01;
+		transition-duration: .2s;
+	}
+}
+
+.main-section {
+	background-color: @lightgrey;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.hero-banner {
+
+	margin: 0 2rem 0rem 2rem;
+	padding: 0 0 2rem 0;
+
+	img {
+		width: 15%;
+		height: auto;
+		margin: 2rem 0 2rem 0;
+	}
+
+	h1 {
+		font-size: 3.5rem;
+		font-weight: 500;
+		margin: 0 0 1rem 0;
+	}
+
+	h3 {
+		font-size: 2rem;
+		font-weight: 600;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+		margin: 1rem 0;
+		padding: 0 0 1.5rem 0;
+		border-bottom: 1px solid gray;
+	}
+
+	p {
+		margin: 0 0 1rem 0;
+		font-size: @rem01;
+	}
+
+	button {
+		background-color: @secondary-color;
+		border-radius: 5px;
+		padding: 1rem 2rem;
+		margin: 0 0 3rem 0;
+	}
+
+	button a {
+		text-decoration: none;
+		color: #fff;
+		font-size: 1rem;
+	}
+}
+
+.middle-container {
+	background-color: #fff;
+}
+
+.middle-section-content {
+	display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    margin: 0 auto;
+
+	.about {
+		width: 50%;
+
+		h2 {
+			font-size: 2rem;
+			margin: 2rem 0 1rem 0;
+		}
+
+		p {
+			font-size: @rem01;
+			margin: 1rem 0;
+		}
+
+		p:last-child {
+			margin: 0 0 2rem 0;
+		}
+	}
+
+	.skill {
+		width: 40%;
+
+		h2 {
+			font-size: 2rem;
+			margin: 2rem 0 1rem 0;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+		}
+
+		li {
+			border: .5px solid @lightgrey;
+			padding: 1rem 1rem;
+		}
+	}
+}
+
+.work-experience-container {
+
+	.work-places {
+        margin: 0 auto;
+        width: 95%;
+		padding: 0 0 2rem 0;
+
+		h2 {
+			font-size: 1rem;
+			margin: 0 0 1rem 0;
+		}
+
+		ul {
+			margin: 0 0 0 1.5rem;
+			list-style-type: disc;
+			font-size: 1rem;
+		}
+    }
+}
+
+footer .contact {
+	h2 {
+		font-size: 1rem;
+		margin: 0rem 0rem;
+	}
+
+	h3 {
+		margin: 1rem 0 1rem 0;
+		font-size: .8rem;
+	}
+
+	a {
+		text-decoration: underline;
+        color: @leroyblue;
+        font-size: .8rem;
+        text-transform: uppercase;
+	}
+
+}
